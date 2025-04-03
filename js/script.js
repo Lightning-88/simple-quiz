@@ -6,18 +6,25 @@ window.addEventListener("resize", setVh);
 setVh();
 
 let userInBrowser = false;
+let userStart = false;
 let currentQuestion = 0;
 let userAnswers = new Array(questions.length).fill(null);
 let timeLeft = 120;
 let timeOver = false;
 let timerInterval;
 
-document.addEventListener("visibilitychange", function () {
-  if (!document.hidden && !userInBrowser) {
-    alert("jangan keluar dari browser😡");
-    window.location.reload();
-  }
-});
+function startQuiz() {
+  const quizContainer = document.querySelector(".quiz-container");
+  const buttonStartContainer = document.querySelector(".button-start");
+  const startButton = document.getElementById("start-button");
+  startButton.addEventListener("click", function () {
+    userStart = true;
+    buttonStartContainer.style.display = "none";
+    quizContainer.classList.remove("none");
+    startTimer();
+    loadQuestion(currentQuestion);
+  });
+}
 
 
 function startTimer() {
@@ -88,27 +95,25 @@ function calculateScore() {
       score++;
     }
   });
+  document.getElementById("score").innerHTML = score;
+
   const sticker = document.getElementById("sticker");
   if (score >= 9) {
-    document.getElementById("score").innerHTML = score;
     sticker.setAttribute(
       "src",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwPnLJVw515woobpzlR807J_wxOsbgksvagQzdEDV7-8bQ85CeWXbTgSE&s=10"
     );
   } else if (score >= 7) {
-    document.getElementById("score").innerHTML = score;
     sticker.setAttribute(
       "src",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwPnLJVw515woobpzlR807J_wxOsbgksvagQzdEDV7-8bQ85CeWXbTgSE&s=10"
     );
   } else if (score >= 3) {
-    document.getElementById("score").innerHTML = score;
     sticker.setAttribute(
       "src",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGZa9e0hhgnIvdCbcsEKv4PZkAcvWPJaFPSBig8y9At8oAWy-AnvIuu8LH&s=10"
     );
   } else if (score >= 0) {
-    document.getElementById("score").innerHTML = score;
     sticker.setAttribute(
       "src",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzFz20-8UngpUpmTiqVrmTTkZp79Q06hg_HOMq0cvTqK-USiwmk6pVdSw&s=10"
@@ -140,5 +145,13 @@ document.getElementById("prevBtn").addEventListener("click", function () {
   }
 });
 
-startTimer();
-loadQuestion(currentQuestion);
+document.addEventListener("visibilitychange", function () {
+  if (!document.hidden && !userInBrowser && userStart) {
+    alert("jangan keluar dari browser😡");
+    userAnswers = new Array(questions.length).fill(null);
+    currentQuestion = 0;
+    loadQuestion(currentQuestion);
+  }
+});
+
+startQuiz();
