@@ -1,10 +1,3 @@
-document.addEventListener("visibilitychange", function () {
-  if (!document.hidden) {
-    alert("jangan keluar dari browser😡");
-    window.location.reload();
-  }
-});
-
 function setVh() {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty("--vh", `${vh}px`);
@@ -12,11 +5,20 @@ function setVh() {
 window.addEventListener("resize", setVh);
 setVh();
 
+let userInBrowser = false;
 let currentQuestion = 0;
 let userAnswers = new Array(questions.length).fill(null);
 let timeLeft = 120;
 let timeOver = false;
 let timerInterval;
+
+document.addEventListener("visibilitychange", function () {
+  if (!document.hidden && !userInBrowser) {
+    alert("jangan keluar dari browser😡");
+    window.location.reload();
+  }
+});
+
 
 function startTimer() {
   if (timerInterval) return;
@@ -115,6 +117,7 @@ function calculateScore() {
 }
 
 function showScore() {
+  userInBrowser = true;
   document.getElementById("quiz").style.display = "none";
   document.querySelector(".navigation").style.display = "none";
   document.getElementById("scoreContainer").style.display = "block";
