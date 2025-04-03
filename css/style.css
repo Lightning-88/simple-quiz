@@ -107,9 +107,6 @@ body {
   color: #808080;
   cursor: not-allowed;
 }
-.navigation button:nth-child(3):disabled:hover {
-  background-color: #ff0000;
-}
 .scoreContainer {
   display: flex;
   align-items: center;
