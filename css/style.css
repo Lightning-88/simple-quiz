@@ -16,6 +16,7 @@ body {
   justify-content: center;
   align-items: center;
   height: calc(var(--vh, 1vh) * 100);
+  user-select: none;
 }
 .parent {
   display: flex;
