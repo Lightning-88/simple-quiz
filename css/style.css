@@ -108,12 +108,10 @@ body {
   cursor: not-allowed;
 }
 .navigation button:nth-child(3):disabled:hover {
-  color: f1f1f1;
+  color: #f1f1f1;
   background-color: #808080;
 }
 .scoreContainer {
-  display: flex;
-  align-items: center;
   text-align: center;
   display: none;
 }
