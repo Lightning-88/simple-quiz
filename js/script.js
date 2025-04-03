@@ -133,6 +133,7 @@ document.getElementById("nextBtn").addEventListener("click", function () {
     currentQuestion++;
     loadQuestion(currentQuestion);
   } else {
+    clearInterval(timerInterval);
     calculateScore();
     showScore();
   }
