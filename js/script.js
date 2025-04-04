@@ -63,7 +63,7 @@ function loadQuestion(index) {
   questions[index].options.forEach((option, i) => {
     const div = document.createElement("div");
     div.className = "option-box";
-    div.innerHTML = option;
+    div.textContent = option;
     div.onclick = function () {
       userAnswers[index] = i;
       document
