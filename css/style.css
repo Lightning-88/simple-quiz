@@ -42,13 +42,11 @@ body {
 }
 .quiz-container {
   background-color: #1e1e1e;
-  flex: 1;
   margin: 0 30px;
   max-width: 350px;
   width: 100%;
   padding: 20px;
-  border-radius: 5px;
-  border-radius: 5px;
+  border-radius: 20px;
   box-shadow: 0 0 50px 0.1px rgba(241 ,241, 241, 0.2);
 }
 .quiz-container.none {
