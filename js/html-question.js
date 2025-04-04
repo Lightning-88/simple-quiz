@@ -2,7 +2,7 @@ const questions = [
   {
     question:
       "Manakah elemen semantic HTML5 yang paling tepat untuk mendefinisikan area navigasi utama pada sebuah halaman web?",
-    options: ["&lt;div&gt;", "&lt;section&gt;", "&lt;nav&gt;", "&lt;aside&gt;"],
+    options: ["<div>", "<section>", "<nav>", "<aside>"],
     answer: 2,
   },
   {
@@ -28,12 +28,7 @@ const questions = [
   {
     question:
       "Manakah dari berikut ini yang merupakan elemen baru pada HTML5 untuk mendefinisikan artikel independen?",
-    options: [
-      "&lt;main&gt;",
-      "&lt;section&gt;",
-      "&lt;aside&gt;",
-      "&lt;article&gt;",
-    ],
+    options: ["<main>", "<section>", "<aside>", "<article>"],
     answer: 3,
   },
   {
@@ -64,18 +59,13 @@ const questions = [
   },
   {
     question: "Dibawah ini yang termasuk element sematic HTML5 adalah...",
-    options: ["&lt;aside&gt;", "&lt;div&gt;", "&lt;bottom&gt;", "Semua Salah"],
+    options: ["<aside>", "<div>", "<bottom>", "Semua Salah"],
     answer: 0,
   },
   {
     question:
       "Di HTML5, elemen mana yang sebaiknya digunakan untuk menandai konten yang berisi navigasi tambahan atau sekunder?",
-    options: [
-      "&lt;nav&gt;",
-      "&lt;aside&gt;",
-      "&lt;footer&gt;",
-      "&lt;section&gt;",
-    ],
+    options: ["<nav>", "<aside>", "<footer>", "<section>"],
     answer: 0,
   },
   {
@@ -87,5 +77,94 @@ const questions = [
       "Untuk menandai bagian teks yang penting atau relevan dengan konteks",
     ],
     answer: 3,
+  },
+  {
+    question:
+      "Manakah dari berikut ini yang BUKAN merupakan atribut global di HTML5?",
+    options: ["id", "href", "style", "class"],
+    answer: 1,
+  },
+  {
+    question: "Atribut novalidate pada tag <form> digunakan untuk …",
+    options: [
+      "Menonaktifkan validasi bawaan browser saat mengirim form",
+      "Mengaktifkan validasi form secara otomatis",
+      "Menambahkan data validasi custom",
+      "Memastikan form hanya bisa diisi melalui JavaScript",
+    ],
+    answer: 0,
+  },
+  {
+    question: "Atribut charset yang terdapat pada tag <meta> berfungsi untuk …",
+    options: [
+      "Menentukan encoding karakter dokumen",
+      "Menentukan bahasa yang digunakan",
+      "Menyisipkan stylesheet eksternal",
+      "Menambahkan metadata untuk SEO",
+    ],
+    answer: 0,
+  },
+  {
+    question:
+      "Manakah cara yang benar untuk menuliskan komentar dalam dokumen HTML?",
+    options: [
+      "// Ini komentar",
+      "/* Ini komentar */",
+      "<!-- Ini komentar -->",
+      "<comment>Ini komentar</comment>",
+    ],
+    answer: 3,
+  },
+  {
+    question: "Element <template> diHTML5 berguna untuk ...",
+    options: [
+      "Menyimpan konten yang tidak ditampilkan langsung pada halaman tetapi dapat diaktifkan melalui JavaScript",
+      "Menampilkan template layout responsif",
+      "Menyimpan data form secara sementara",
+      "Menyusun elemen visual dengan efek animasi",
+    ],
+    answer: 0,
+  },
+  {
+    question:
+      "Dalam HTML5, bagaimana cara yang tepat untuk menandai bagian footer dari sebuah halaman?",
+    options: ["<footer>", "<aside>", "<div>", "<bottom>"],
+    answer: 0,
+  },
+  {
+    question:
+      "Untuk menambahkan metadata ke dokumen HTML, elemen apa yang digunakan di dalam <head>?",
+    options: ["<info>", "<data>", "<header>", "<meta>"],
+    answer: 3,
+  },
+  {
+    question: "Elemen <main> di HTML5 digunakan untuk …",
+    options: [
+      "Menandai bagian navigasi utama",
+      "Menampilkan konten utama",
+      "Menyematkan video dan multimedia",
+      "Menampilkan judul utama dokumen",
+    ],
+    answer: 1,
+  },
+  {
+    question: "Atribut target pada elemen <a> umumnya digunakan untuk …",
+    options: [
+      "Menetapkan di mana dokumen yang ditautkan akan dibuka",
+      "Menentukan tipe file yang dituju",
+      "Mengubah warna tautan",
+      "Mengatur ukuran tampilan halaman",
+    ],
+    answer: 0,
+  },
+  {
+    question: "Elemen <center> digunakan untuk ...",
+    options: [
+      "Memusatkan teks dan elemen lainnya",
+      "Membuat teks menjadi berwarna ungu",
+      "Untuk menambahkan hyperlink",
+      "Untuk menandai bagian teks yang penting atau relevan dengan konteks",
+    ],
+    answer: 0,
   },
 ];
